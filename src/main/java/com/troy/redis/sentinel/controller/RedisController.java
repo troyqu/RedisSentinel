@@ -22,6 +22,17 @@ public class RedisController {
 
     @Autowired
     RedisTemplate<String, Object> redisTemplate;
+    
+//    private ValueOperations<Object,Object> valueOperations;
+//    private ListOperations<Object,Object> listOperations;
+//    private HashOperations hashOperations;
+//
+//    @PostConstruct
+//    public void getValueOperation(){
+//        valueOperations = redisTemplate.opsForValue();
+//        listOperations = redisTemplate.opsForList();
+//        hashOperations = redisTemplate.opsForHash();
+//    }    
 
     @RequestMapping("/get/{key}")
     public String getValue(@PathVariable("key") String key){
